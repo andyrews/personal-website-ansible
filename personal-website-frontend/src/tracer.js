@@ -20,9 +20,9 @@ const exporter = new OTLPTraceExporter({
 
 const provider = new WebTracerProvider({
   resource: resource,
+  spanProcessors: [new BatchSpanProcessor(exporter)]
 });
 
-provider.addSpanProcessor(new BatchSpanProcessor(exporter));
 provider.register();
 
 registerInstrumentations({
