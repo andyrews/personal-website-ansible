@@ -12,7 +12,7 @@ const resource = new resourceFromAttributes({
   [SemanticResourceAttributes.SERVICE_NAME]: 'frontend',
 });
 
-const collectorEndpoint = 'http://localhost:4318/v1/traces';
+const collectorEndpoint = 'https://personalwebsite.com/v1/traces';
 
 const exporter = new OTLPTraceExporter({
   url: collectorEndpoint,
